@@ -1,0 +1,38 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "description": "base logger implementation using a banch providers",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "npm test && npm run eslint",
+    "eslint": "./node_modules/.bin/eslint .",
+    "test": "./node_modules/.bin/mocha ./test --recursive --reporter spec",
+    "coverage": "./node_modules/.bin/nyc --reporter=html --reporter=text ./node_modules/.bin/mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:melnychukvitaliy/nodejs-logger.git"
+  },
+  "keywords": [
+    "logger"
+  ],
+  "author": "Vitalii Melnychuk",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.10.0",
+    "husky": "^0.14.3",
+    "mocha": "^4.0.1",
+    "nyc": "11.3.0",
+    "proxyquire": "^1.8.0",
+    "sinon": "^4.1.1"
+  },
+  "dependencies": {
+    "bugsnag": "^2.4.3",
+    "colors": "^1.2.1",
+    "jsonschema": "^1.2.0",
+    "pino": "^4.15.4",
+    "pino-multi-stream": "^3.1.2",
+    "pino-socket": "git+https://github.com/bohdankruchak/pino-socket.git"
+  }
+}
